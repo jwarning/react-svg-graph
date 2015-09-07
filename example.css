@@ -1,0 +1,28 @@
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased !important;
+  color: #222;
+  margin: auto;
+  width: 400px;
+}
+
+.footer {
+  margin: 50px 10px 0 10px;
+  padding: 10px;
+  border-top: #ddd solid 1px;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+p, a {
+  font-size: 14px;
+  text-align: center;
+}
+
+a {
+  display: block;
+}

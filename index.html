@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>React SVG Graph Example</title>
+  <meta name="description" content="An SVG-based graph component for React">
+  <link rel="stylesheet" href="example.css">
+</head>
+<body>
+  <div class="container">
+    <h1>React SVG Graph</h1>
+    <p>A simple graph component for React that plots the given data as either a bar or line graph.
+      Any changes to the data will trigger an animated transition between the old and new graph.</p>
+    <div id="bar-graph"></div>
+    <div id="line-graph"></div>
+    <p>Click the button to turn on a demonstration of animating the graphs by changing the data
+      randomly every 2 seconds</p>
+    <p><button class="buttonToggle" type="button">Click to toggle animation</button></p>
+    <div class="footer">
+      <a href='https://github.com/jwarning/react-svg-graph'>github.com/jwarning/react-svg-graph</a>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+</body>
+</html>
