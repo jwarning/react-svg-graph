@@ -1,6 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactSVGGraph = require('./index.js');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactSVGGraph from './index.js';
 
 var renderGraphs = function () {
   var data = [];

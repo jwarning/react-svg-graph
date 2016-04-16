@@ -16,7 +16,8 @@ export default React.createClass({
       leftPadding: 35,
       topPadding: 5,
       rightPadding: 5,
-      bottomPadding: 20
+      bottomPadding: 20,
+      animationRenderInterval: 50
     };
   },
   getInitialState () {
@@ -59,7 +60,7 @@ export default React.createClass({
           oldMaxValue: this.props.maxValue || Math.max.apply(null, this.props.data.map(v => v.value))
         });
       }
-    }, 50);
+    }, this.props.animationRenderInterval || 50);
   },
   render () {
     return <svg width={this.props.width} height={this.props.height}>
