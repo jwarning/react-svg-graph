@@ -1,10 +1,18 @@
 {
   "name": "react-svg-graph",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "An SVG-based graph component for React",
-  "main": "dist/react-svg-graph.js",
   "author": "Jonathan Warning",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwarning/react-svg-graph"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp",
+    "prepublish": "npm run build"
+  },
   "devDependencies": {
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
@@ -19,6 +27,11 @@
   "peerDependencies": {
     "react": ">=15.0.0"
   },
+  "tags": [
+    "react",
+    "graph",
+    "svg"
+  ],
   "keywords": [
     "react",
     "graph",
@@ -26,9 +39,5 @@
     "bar",
     "line",
     "dynamic"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jwarning/react-svg-graph"
-  }
+  ]
 }

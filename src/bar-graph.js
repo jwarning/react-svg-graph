@@ -11,7 +11,7 @@ export default React.createClass({
       oldMaxValue: 0,
       data: [],
       oldData: [],
-      percentHeight: 0.0,
+      percentHeight: 0.0
     };
   },
   render () {

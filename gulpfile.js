@@ -8,7 +8,7 @@ gulp.task('build', function (callback) {
         entry: ['./index'],
         output: {
             path: path.resolve(__dirname, './dist'),
-            filename: 'react-svg-graph.js',
+            filename: 'index.js',
             library: 'react-svg-graph',
             libraryTarget: 'umd'
         },
@@ -41,9 +41,9 @@ gulp.task('build', function (callback) {
 gulp.task('example', function (callback) {
     webpack({
         context: path.resolve(__dirname, './'),
-        entry: ['./app'],
+        entry: ['./example/app'],
         output: {
-            path: path.resolve(__dirname, './'),
+            path: path.resolve(__dirname, './example'),
             filename: 'bundle.js'
         },
         module: {

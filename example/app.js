@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactSVGGraph from './index.js';
+import ReactSVGGraph from '../dist/index.js';
 
-var renderGraphs = function () {
-  var data = [];
-  for (var i = 0; i < 16; i++) {
+function renderGraphs() {
+  let data = [];
+
+  for (let i = 0; i < 16; i++) {
     data.push({ id: i, value: parseInt(Math.random() * 100, 10) });
   }
 
@@ -25,10 +26,10 @@ var renderGraphs = function () {
   }), document.getElementById('line-graph'));
 };
 
-var toggle = false;
-var interval = null;
+let toggle = false;
+let interval = null;
 
-var toggleAnimation = function () {
+function toggleAnimation() {
   if (!toggle) {
     renderGraphs();
     interval = setInterval(renderGraphs, 2000);

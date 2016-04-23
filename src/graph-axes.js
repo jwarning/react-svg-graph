@@ -14,7 +14,7 @@ export default React.createClass({
       rightPadding: 5,
       bottomPadding: 20,
       graphWidth: 0,
-      graphHeight: 0,
+      graphHeight: 0
     };
   },
   render () {
