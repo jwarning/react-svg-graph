@@ -1,5 +1,6 @@
-var React = require('react');
-var ReactSVGGraph = require('./index.js');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactSVGGraph from './index.js';
 
 var renderGraphs = function () {
   var data = [];
@@ -7,7 +8,7 @@ var renderGraphs = function () {
     data.push({ id: i, value: parseInt(Math.random() * 100, 10) });
   }
 
-  React.render(React.createElement(ReactSVGGraph, {
+  ReactDOM.render(React.createElement(ReactSVGGraph, {
     graphType: 'bar',
     data: data,
     maxValue: 100,
@@ -15,7 +16,7 @@ var renderGraphs = function () {
     height: 150
   }), document.getElementById('bar-graph'));
 
-  React.render(React.createElement(ReactSVGGraph, {
+  ReactDOM.render(React.createElement(ReactSVGGraph, {
     graphType: 'line',
     data: data,
     maxValue: 100,
