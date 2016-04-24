@@ -17,12 +17,12 @@ export default React.createClass({
   render () {
     return <g>
       {this.props.data.map((value, key) => {
-        var barHeight = this.props.data[key].value / this.props.maxValue * this.props.graphHeight;
+        let barHeight = this.props.data[key].value / this.props.maxValue * this.props.graphHeight;
         if (isNaN(barHeight)) barHeight = 0;
-        var oldHeight = this.props.oldData && this.props.oldData[key] ? this.props.oldData[key].value : undefined;
+        let oldHeight = this.props.oldData && this.props.oldData[key] ? this.props.oldData[key].value : undefined;
         oldHeight = oldHeight ? oldHeight / this.props.oldMaxValue * this.props.graphHeight : 0;
 
-        var height = barHeight >= oldHeight ? oldHeight + (barHeight - oldHeight) * this.props.percentHeight :
+        let height = barHeight >= oldHeight ? oldHeight + (barHeight - oldHeight) * this.props.percentHeight :
           oldHeight - ((oldHeight - barHeight) * this.props.percentHeight);
         if (height < 0) height = 0;
         if (height < 2 && value > 0) height = 2; // min height to stop firefox showing no bar at some widths

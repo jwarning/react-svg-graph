@@ -7,8 +7,6 @@ The component accepts various props that allow you to set the sizing and behavio
 Inspired by libraries like d3.js and dc.js, this provides a simple component without any extra
 dependencies or the overhead of any libraries other than React.
 
-:warning: Currently still a work in progress
-
 ** More features to come in the future **
 
 ## Demo

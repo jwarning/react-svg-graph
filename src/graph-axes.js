@@ -18,7 +18,7 @@ export default React.createClass({
     };
   },
   render () {
-    var tickWidth = this.props.graphWidth / this.props.data.length;
+    let tickWidth = this.props.graphWidth / this.props.data.length;
 
     return <g>
       <line

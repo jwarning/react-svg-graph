@@ -38,7 +38,7 @@ gulp.task('build', function (callback) {
     });
 });
 
-gulp.task('example', function (callback) {
+gulp.task('example', ['build'], function (callback) {
     webpack({
         context: path.resolve(__dirname, './'),
         entry: ['./example/app'],

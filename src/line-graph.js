@@ -15,13 +15,13 @@ export default React.createClass({
     };
   },
   render () {
-    var data = this.props.data.map((value, key) => {
-      var lineHeight = this.props.data[key].value / this.props.maxValue * this.props.graphHeight;
+    let data = this.props.data.map((value, key) => {
+      let lineHeight = this.props.data[key].value / this.props.maxValue * this.props.graphHeight;
       if (isNaN(lineHeight)) lineHeight = 0;
-      var oldHeight = this.props.oldData && this.props.oldData[key] ? this.props.oldData[key].value : undefined;
+      let oldHeight = this.props.oldData && this.props.oldData[key] ? this.props.oldData[key].value : undefined;
       oldHeight = oldHeight ? oldHeight / this.props.oldMaxValue * this.props.graphHeight : 0;
 
-      var height = lineHeight >= oldHeight ? oldHeight + (lineHeight - oldHeight) * this.props.percentHeight :
+      let height = lineHeight >= oldHeight ? oldHeight + (lineHeight - oldHeight) * this.props.percentHeight :
         oldHeight - ((oldHeight - lineHeight) * this.props.percentHeight);
       if (height < 0) height = 0;
 
@@ -31,7 +31,7 @@ export default React.createClass({
       };
     });
 
-    var path = 'M0,' + this.props.graphHeight + 'L';
+    let path = 'M0,' + this.props.graphHeight + 'L';
     data.forEach(val => {
       path += val.x + ',' + val.y + 'L';
     });

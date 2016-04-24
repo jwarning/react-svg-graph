@@ -46,7 +46,7 @@ export default React.createClass({
   },
   timer () {
     // use a timer to animate changes to the graph's data
-    var timer = setInterval(() => {
+    let timer = setInterval(() => {
       if (!this.isMounted()) clearInterval(timer);
       else if (this.state.percentHeight < 1) {
         this.setState({
