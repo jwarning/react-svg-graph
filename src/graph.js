@@ -1,12 +1,12 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import BarGraph from './bar-graph';
 import LineGraph from './line-graph';
 import GraphAxes from './graph-axes';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 export default React.createClass({
   mixins: [PureRenderMixin],
-  getDefaultProps () {
+  getDefaultProps() {
     return {
       graphType: 'bar',
       data: [],
@@ -20,7 +20,7 @@ export default React.createClass({
       animationRenderInterval: 50
     };
   },
-  getInitialState () {
+  getInitialState() {
     return {
       maxValue: this.props.maxValue || Math.max.apply(null, this.props.data.map(v => v.value)),
       oldMaxValue: this.props.maxValue || Math.max.apply(null, this.props.data.map(v => v.value)),
@@ -30,10 +30,10 @@ export default React.createClass({
       graphHeight: this.props.height - this.props.topPadding - this.props.bottomPadding
     };
   },
-  componentDidMount () {
+  componentDidMount() {
     this.timer();
   },
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (!this.isMounted()) return;
 
     this.setState({
@@ -44,7 +44,7 @@ export default React.createClass({
       graphHeight: this.props.height - this.props.topPadding - this.props.bottomPadding
     }, this.timer);
   },
-  timer () {
+  timer() {
     // use a timer to animate changes to the graph's data
     let timer = setInterval(() => {
       if (!this.isMounted()) clearInterval(timer);
@@ -62,7 +62,7 @@ export default React.createClass({
       }
     }, this.props.animationRenderInterval || 50);
   },
-  render () {
+  render() {
     return <svg width={this.props.width} height={this.props.height}>
       <g transform={'translate(' + this.props.leftPadding + ',' + this.props.topPadding + ')'}>
         {this.props.graphType === 'bar' && <BarGraph {...this.props} {...this.state} />}

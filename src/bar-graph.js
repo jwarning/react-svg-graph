@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 export default React.createClass({
   mixins: [PureRenderMixin],
-  getDefaultProps () {
+  getDefaultProps() {
     return {
       graphWidth: 0,
       graphHeight: 0,
@@ -14,7 +14,7 @@ export default React.createClass({
       percentHeight: 0.0
     };
   },
-  render () {
+  render() {
     return <g>
       {this.props.data.map((value, key) => {
         let barHeight = this.props.data[key].value / this.props.maxValue * this.props.graphHeight;

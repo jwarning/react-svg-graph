@@ -2,9 +2,8 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 export default React.createClass({
-  displayName: 'GraphAxes',
   mixins: [PureRenderMixin],
-  getDefaultProps () {
+  getDefaultProps() {
     return {
       graphType: 'bar',
       maxValue: 0,
@@ -17,7 +16,7 @@ export default React.createClass({
       graphHeight: 0
     };
   },
-  render () {
+  render() {
     let tickWidth = this.props.graphWidth / this.props.data.length;
 
     return <g>
