@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactSVGGraph from '../dist/index.js';
+import ReactSVGGraph from '../dist/index';
 
 function renderGraphs() {
   let data = [];
@@ -9,21 +9,21 @@ function renderGraphs() {
     data.push({ id: i, value: parseInt(Math.random() * 100, 10) });
   }
 
-  ReactDOM.render(React.createElement(ReactSVGGraph, {
-    graphType: 'bar',
-    data: data,
-    maxValue: 100,
-    width: 400,
-    height: 150
-  }), document.getElementById('bar-graph'));
+  ReactDOM.render(<ReactSVGGraph
+    graphType='bar'
+    data={data}
+    maxValue={100}
+    width={400}
+    height={150}
+  />, document.getElementById('bar-graph'));
 
-  ReactDOM.render(React.createElement(ReactSVGGraph, {
-    graphType: 'line',
-    data: data,
-    maxValue: 100,
-    width: 400,
-    height: 150
-  }), document.getElementById('line-graph'));
+  ReactDOM.render(<ReactSVGGraph
+    graphType='line'
+    data={data}
+    maxValue={100}
+    width={400}
+    height={150}
+  />, document.getElementById('line-graph'));
 };
 
 let toggle = false;
