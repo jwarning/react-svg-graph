@@ -17,7 +17,9 @@ export default React.createClass({
       topPadding: 5,
       rightPadding: 5,
       bottomPadding: 20,
-      animationRenderInterval: 50
+      animationRenderInterval: 50,
+      graphClass: '',
+      graphFill: 'steelblue'
     };
   },
   getInitialState() {

@@ -11,7 +11,9 @@ export default React.createClass({
       oldMaxValue: 0,
       data: [],
       oldData: [],
-      percentHeight: 0.0
+      percentHeight: 0.0,
+      graphClass: '',
+      graphFill: 'steelblue'
     };
   },
   render() {
@@ -38,11 +40,11 @@ export default React.createClass({
     path += this.props.graphWidth + ',' + this.props.graphHeight + 'Z';
 
     return <path
-      className=''
+      className={this.props.graphClass}
       d={path}
-      stroke='rgb(70,130,180)'
+      stroke={this.props.graphFill}
       strokeWidth='2'
-      fill='rgb(70,130,180)'
+      fill={this.props.graphFill}
       fillOpacity='0.3'
     />;
   }

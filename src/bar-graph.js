@@ -11,7 +11,9 @@ export default React.createClass({
       oldMaxValue: 0,
       data: [],
       oldData: [],
-      percentHeight: 0.0
+      percentHeight: 0.0,
+      graphClass: '',
+      graphFill: 'steelblue'
     };
   },
   render() {
@@ -28,9 +30,10 @@ export default React.createClass({
         if (height < 2 && value > 0) height = 2; // min height to stop firefox showing no bar at some widths
 
         return <rect
+          className={this.props.graphClass}
           width={this.props.graphWidth > 0 ? this.props.graphWidth / this.props.data.length - 2 : 0}
           height={height}
-          fill='steelblue'
+          fill={this.props.graphFill}
           x={key * (this.props.graphWidth / this.props.data.length) + 1}
           y={this.props.graphHeight - height}
           key={'bar-graph-bar-' + key}
