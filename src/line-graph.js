@@ -13,7 +13,7 @@ export default React.createClass({
       oldData: [],
       percentHeight: 0.0,
       graphClass: '',
-      graphFill: 'steelblue'
+      fill: 'steelblue'
     };
   },
   render() {
@@ -42,9 +42,9 @@ export default React.createClass({
     return <path
       className={this.props.graphClass}
       d={path}
-      stroke={this.props.graphFill}
+      stroke={this.props.fill}
       strokeWidth='2'
-      fill={this.props.graphFill}
+      fill={this.props.fill}
       fillOpacity='0.3'
     />;
   }

@@ -26,6 +26,9 @@ Optional props to set on the component:
 - topPadding: amount of padding on the top of the graph in px
 - rightPadding: amount of padding on the right of the graph in px
 - bottomPadding: amount of padding on the bottom of the graph in px
+- animationRenderInterval: time between re-renders of the graphs during a transition
+- graphClass: the class to set on the svg bars or line of the graph
+- fill: colour for the fill on the bars or the line of the graph
 
 The data points should be structured in an array as follows:
 ```
@@ -34,10 +37,6 @@ The data points should be structured in an array as follows:
   value: // numeric value of the point
 }, ...]
 ```
-
-To build a CommonJS version of this file simply run `gulp build`.
-If you want a different output type you can simply set the option on the Babel
-step in the gulpfile. A build is already included in the dist folder.
 
 ## License
 

@@ -13,7 +13,7 @@ export default React.createClass({
       oldData: [],
       percentHeight: 0.0,
       graphClass: '',
-      graphFill: 'steelblue'
+      fill: 'steelblue'
     };
   },
   render() {
@@ -33,7 +33,7 @@ export default React.createClass({
           className={this.props.graphClass}
           width={this.props.graphWidth > 0 ? this.props.graphWidth / this.props.data.length - 2 : 0}
           height={height}
-          fill={this.props.graphFill}
+          fill={this.props.fill}
           x={key * (this.props.graphWidth / this.props.data.length) + 1}
           y={this.props.graphHeight - height}
           key={'bar-graph-bar-' + key}
